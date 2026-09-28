@@ -1,0 +1,1 @@
+{"name":"noir-coffee","version":"1.0.0","private":true,"type":"module","scripts":{"build":"node build.mjs","start":"node server.cjs","test":"node --test src/shop.test.js"},"dependencies":{"react":"19.3.0","react-dom":"19.3.0","gsap":"3.15.0"},"devDependencies":{"esbuild":"0.25.12"}}

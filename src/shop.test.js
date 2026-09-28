@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {cleanCart,changeCart,total} from './shop.js';
+test('cart rejects invalid storage and unknown products, caps quantity, and calculates selections',()=>{assert.deepEqual(cleanCart({beans:200,espresso:-1,velvet:1.2,unknown:4}),{beans:99});let c=changeCart({},'beans',1);c=changeCart(c,'espresso',2);assert.equal(total(c),66);assert.deepEqual(changeCart(c,'unknown',1),c);assert.equal(changeCart(c,'beans',-1).beans,undefined);assert.deepEqual(cleanCart(null),{})});
